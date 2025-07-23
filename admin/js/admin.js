@@ -1,7 +1,7 @@
 // Admin credentials
 const ADMIN_CREDENTIALS = {
-    username: 'admin',
-    password: 'admin123'
+    username: 'Siam',
+    password: 'Siam123'
 };
 
 // Check if admin is logged in
@@ -30,7 +30,7 @@ function handleAdminLogin(e) {
         sessionStorage.setItem('adminLoggedIn', 'true');
         checkAuth();
     } else {
-        alert('Invalid credentials! Please use admin/admin123');
+        alert('Invalid credentials!');
     }
 }
 
@@ -162,7 +162,7 @@ function loadProducts() {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${product.name}</td>
-            <td>$${product.price}</td>
+            <td>${product.price}</td>
             <td>${product.stock}</td>
             <td>${product.category || 'N/A'}</td>
             <td>
